@@ -34,7 +34,8 @@ extension UIView {
     func anchorTo(centerX: NSLayoutXAxisAnchor, centerY: NSLayoutYAxisAnchor, centerXConstant: CGFloat, centerYConstant: CGFloat, widthConstant: CGFloat, heightConstant: CGFloat) -> [String: NSLayoutConstraint] {
         return anchor(centerX: centerX, centerY: centerY, centerXConstant: centerXConstant, centerYConstant: centerYConstant, widthConstant: widthConstant, heightConstant: heightConstant)
     }
-
+    
+    /// This basically just anchors your view to wherever you want it to be anchored with much less effort.
     func anchor(top: NSLayoutYAxisAnchor? = nil, bottom: NSLayoutYAxisAnchor? = nil, left: NSLayoutXAxisAnchor? = nil, right: NSLayoutXAxisAnchor? = nil, width: NSLayoutDimension? = nil, height: NSLayoutDimension? = nil, centerX: NSLayoutXAxisAnchor? = nil, centerY: NSLayoutYAxisAnchor? = nil, topConstant: CGFloat? = nil, bottomConstant: CGFloat? = nil, leftConstant: CGFloat? = nil, rightConstant: CGFloat? = nil, centerXConstant: CGFloat? = nil, centerYConstant: CGFloat? = nil, widthConstant: CGFloat? = nil, heightConstant: CGFloat? = nil) -> [String: NSLayoutConstraint] {
         
         //Setup
@@ -104,18 +105,5 @@ extension UIView {
             value.isActive = true
         }
         return layoutConstraints
-    }
-}
-
-extension UIImage {
-    class func image(withName name: String, andSize size: CGSize) -> UIImage {
-        let image = UIImage(named: name)
-        let hasAlpha = true
-        let scale: CGFloat = 0.0
-        UIGraphicsBeginImageContextWithOptions(size, !hasAlpha, scale)
-        image?.draw(in: CGRect(origin: CGPoint.zero, size: size))
-        let scaledImage = UIGraphicsGetImageFromCurrentImageContext()
-        UIGraphicsEndImageContext()
-        return scaledImage!
     }
 }

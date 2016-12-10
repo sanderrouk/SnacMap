@@ -1,0 +1,19 @@
+PODS:
+  - Alamofire (4.2.0)
+  - GoogleMaps (2.1.1):
+    - GoogleMaps/Maps (= 2.1.1)
+  - GoogleMaps/Base (2.1.1)
+  - GoogleMaps/Maps (2.1.1):
+    - GoogleMaps/Base
+
+DEPENDENCIES:
+  - Alamofire (~> 4.0)
+  - GoogleMaps
+
+SPEC CHECKSUMS:
+  Alamofire: aa2e09d871c9160ac53c90e83c68064a94e3dfbe
+  GoogleMaps: a5b5bbe47734e2443bde781a6aa64e69fdb6d785
+
+PODFILE CHECKSUM: 474f130a4fd23db02bda49762b70f7d5889a1a90
+
+COCOAPODS: 1.1.1

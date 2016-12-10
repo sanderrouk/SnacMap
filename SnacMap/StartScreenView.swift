@@ -10,16 +10,18 @@ import UIKit
 
 class StartScreenView: UIView {
     
-    let normalDemoSegmentedControl: UISegmentedControl = {
-        let segmentedControl = UISegmentedControl(items: ["Normal mode", "Demo mode"])
-        segmentedControl.tintColor = UIColor(white: 0, alpha: 0.2)
-        segmentedControl.selectedSegmentIndex = 0
-        let titleTextAttributes = [NSForegroundColorAttributeName: UIColor.black]
-        UISegmentedControl.appearance().setTitleTextAttributes(titleTextAttributes, for: .normal)
-        UISegmentedControl.appearance().setTitleTextAttributes(titleTextAttributes, for: .selected)
-        return segmentedControl
-    }()
+    //Init
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        backgroundColor = .white
+        setupSubViews()
+    }
     
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    //Define view elements
     let snacMapLabel: UILabel = {
         let label = UILabel()
         label.text = "SnacMap"
@@ -45,6 +47,7 @@ class StartScreenView: UIView {
         tf.clearButtonMode = .whileEditing
         tf.backgroundColor = UIColor(white: 0, alpha: 0.2)
         tf.returnKeyType = .next
+        tf.autocorrectionType = .no
         return tf
     }()
     
@@ -52,8 +55,9 @@ class StartScreenView: UIView {
         let tf = PaddedTextField()
         tf.placeholder = "Destination"
         tf.clearButtonMode = .whileEditing
-        tf.returnKeyType = .done
+        tf.returnKeyType = .route
         tf.backgroundColor = UIColor(white: 0, alpha: 0.2)
+        tf.autocorrectionType = .no
         return tf
     }()
     
@@ -65,23 +69,14 @@ class StartScreenView: UIView {
         return button
     }()
     
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-        backgroundColor = .white
-        setupSubViews()
-    }
     
-    required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-    
+    //Construct view
     fileprivate func setupSubViews() {
         addSubview(originTextField)
         addSubview(originLabel)
         addSubview(destinationTextField)
         addSubview(destinationLabel)
         addSubview(navigateButton)
-        addSubview(normalDemoSegmentedControl)
         addSubview(snacMapLabel)
         
         _ = originTextField.anchor(width: widthAnchor, centerX: centerXAnchor, centerY: centerYAnchor, centerYConstant: -60, widthConstant: -24, heightConstant: 50)
@@ -89,8 +84,7 @@ class StartScreenView: UIView {
         _ = destinationTextField.anchor(width: widthAnchor, centerX: centerXAnchor, centerY: centerYAnchor, centerYConstant: 60, widthConstant: -24, heightConstant: 50)
         _ = destinationLabel.anchor(bottom: destinationTextField.topAnchor, left: destinationTextField.leftAnchor, bottomConstant: -6, heightConstant: 20)
         _ = navigateButton.anchor(top: destinationTextField.bottomAnchor, width: destinationTextField.widthAnchor, centerX: centerXAnchor, topConstant: 50, heightConstant: 50)
-        _ = normalDemoSegmentedControl.anchor(bottom: originLabel.topAnchor, width: originTextField.widthAnchor, centerX: centerXAnchor, bottomConstant: -30)
-        _ = snacMapLabel.anchor(bottom: normalDemoSegmentedControl.topAnchor, centerX: centerXAnchor, bottomConstant: -50)
+        _ = snacMapLabel.anchor(bottom: originLabel.topAnchor, centerX: centerXAnchor, bottomConstant: -50)
     }
 
 }

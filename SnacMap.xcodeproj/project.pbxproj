@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		319E5360DD05C1692F532C48 /* Pods_SnacMap.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41A17398A9153EC8E3E6A5D9 /* Pods_SnacMap.framework */; };
+		A471490B1DF7966100911FEB /* MapController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A471490A1DF7966000911FEB /* MapController.swift */; };
+		A4A2B6121DF8ECBE006CAB1C /* FbApiPlace.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4A2B6111DF8ECBE006CAB1C /* FbApiPlace.swift */; };
 		A4A3E2CD1DF6100A009E0D1E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4A3E2CC1DF6100A009E0D1E /* AppDelegate.swift */; };
 		A4A3E2CF1DF6100A009E0D1E /* StartScreenController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4A3E2CE1DF6100A009E0D1E /* StartScreenController.swift */; };
 		A4A3E2D41DF6100A009E0D1E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A4A3E2D31DF6100A009E0D1E /* Assets.xcassets */; };
@@ -14,9 +17,23 @@
 		A4A3E2E31DF6135A009E0D1E /* StartScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4A3E2E21DF6135A009E0D1E /* StartScreenView.swift */; };
 		A4A3E2E61DF613B9009E0D1E /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4A3E2E51DF613B9009E0D1E /* Extensions.swift */; };
 		A4A3E2E81DF621AD009E0D1E /* PaddedTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4A3E2E71DF621AD009E0D1E /* PaddedTextField.swift */; };
+		A4C4D6FD1DF82F73003C784F /* SafeJsonObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4C4D6FC1DF82F73003C784F /* SafeJsonObject.swift */; };
+		A4C4D6FF1DF83102003C784F /* Directions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4C4D6FE1DF83102003C784F /* Directions.swift */; };
+		A4DAF4B81DFB9D5B00ACCEFB /* FbLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4DAF4B71DFB9D5B00ACCEFB /* FbLocation.swift */; };
+		A4DAF4BA1DFB9D7600ACCEFB /* Route.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4DAF4B91DFB9D7600ACCEFB /* Route.swift */; };
+		A4DAF4BC1DFB9DA300ACCEFB /* OverviewPolyline.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4DAF4BB1DFB9DA300ACCEFB /* OverviewPolyline.swift */; };
+		A4DAF4BE1DFB9DB900ACCEFB /* RouteBounds.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4DAF4BD1DFB9DB900ACCEFB /* RouteBounds.swift */; };
+		A4DAF4C01DFB9DD000ACCEFB /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4DAF4BF1DFB9DD000ACCEFB /* Location.swift */; };
+		A4DAF4C21DFB9DE100ACCEFB /* RouteStep.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4DAF4C11DFB9DE100ACCEFB /* RouteStep.swift */; };
+		A4DAF4C41DFB9DF900ACCEFB /* RouteLeg.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4DAF4C31DFB9DF900ACCEFB /* RouteLeg.swift */; };
+		A4DAF4C61DFB9E0500ACCEFB /* RouteLegDistance.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4DAF4C51DFB9E0500ACCEFB /* RouteLegDistance.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		382E8AF14ED6389BE9ACC4EE /* Pods-SnacMap.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SnacMap.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SnacMap/Pods-SnacMap.debug.xcconfig"; sourceTree = "<group>"; };
+		41A17398A9153EC8E3E6A5D9 /* Pods_SnacMap.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SnacMap.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A471490A1DF7966000911FEB /* MapController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapController.swift; sourceTree = "<group>"; };
+		A4A2B6111DF8ECBE006CAB1C /* FbApiPlace.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FbApiPlace.swift; sourceTree = "<group>"; };
 		A4A3E2C91DF6100A009E0D1E /* SnacMap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SnacMap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4A3E2CC1DF6100A009E0D1E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A4A3E2CE1DF6100A009E0D1E /* StartScreenController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartScreenController.swift; sourceTree = "<group>"; };
@@ -26,6 +43,17 @@
 		A4A3E2E21DF6135A009E0D1E /* StartScreenView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartScreenView.swift; sourceTree = "<group>"; };
 		A4A3E2E51DF613B9009E0D1E /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		A4A3E2E71DF621AD009E0D1E /* PaddedTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaddedTextField.swift; sourceTree = "<group>"; };
+		A4C4D6FC1DF82F73003C784F /* SafeJsonObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SafeJsonObject.swift; sourceTree = "<group>"; };
+		A4C4D6FE1DF83102003C784F /* Directions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Directions.swift; sourceTree = "<group>"; };
+		A4DAF4B71DFB9D5B00ACCEFB /* FbLocation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FbLocation.swift; sourceTree = "<group>"; };
+		A4DAF4B91DFB9D7600ACCEFB /* Route.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Route.swift; sourceTree = "<group>"; };
+		A4DAF4BB1DFB9DA300ACCEFB /* OverviewPolyline.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OverviewPolyline.swift; sourceTree = "<group>"; };
+		A4DAF4BD1DFB9DB900ACCEFB /* RouteBounds.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RouteBounds.swift; sourceTree = "<group>"; };
+		A4DAF4BF1DFB9DD000ACCEFB /* Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
+		A4DAF4C11DFB9DE100ACCEFB /* RouteStep.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RouteStep.swift; sourceTree = "<group>"; };
+		A4DAF4C31DFB9DF900ACCEFB /* RouteLeg.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RouteLeg.swift; sourceTree = "<group>"; };
+		A4DAF4C51DFB9E0500ACCEFB /* RouteLegDistance.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RouteLegDistance.swift; sourceTree = "<group>"; };
+		AAAB41C914FEC399C2BC4057 /* Pods-SnacMap.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SnacMap.release.xcconfig"; path = "Pods/Target Support Files/Pods-SnacMap/Pods-SnacMap.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,17 +61,61 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				319E5360DD05C1692F532C48 /* Pods_SnacMap.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2E3B0281A536D72D217D8C23 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				382E8AF14ED6389BE9ACC4EE /* Pods-SnacMap.debug.xcconfig */,
+				AAAB41C914FEC399C2BC4057 /* Pods-SnacMap.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		7657BDF2943CDB35ADAA0DFB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				41A17398A9153EC8E3E6A5D9 /* Pods_SnacMap.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A4A2B60F1DF8EC9F006CAB1C /* Directions */ = {
+			isa = PBXGroup;
+			children = (
+				A4C4D6FE1DF83102003C784F /* Directions.swift */,
+				A4DAF4B91DFB9D7600ACCEFB /* Route.swift */,
+				A4DAF4BB1DFB9DA300ACCEFB /* OverviewPolyline.swift */,
+				A4DAF4BD1DFB9DB900ACCEFB /* RouteBounds.swift */,
+				A4DAF4BF1DFB9DD000ACCEFB /* Location.swift */,
+				A4DAF4C11DFB9DE100ACCEFB /* RouteStep.swift */,
+				A4DAF4C31DFB9DF900ACCEFB /* RouteLeg.swift */,
+				A4DAF4C51DFB9E0500ACCEFB /* RouteLegDistance.swift */,
+			);
+			name = Directions;
+			sourceTree = "<group>";
+		};
+		A4A2B6101DF8ECAB006CAB1C /* Places */ = {
+			isa = PBXGroup;
+			children = (
+				A4A2B6111DF8ECBE006CAB1C /* FbApiPlace.swift */,
+				A4DAF4B71DFB9D5B00ACCEFB /* FbLocation.swift */,
+			);
+			name = Places;
+			sourceTree = "<group>";
+		};
 		A4A3E2C01DF61009009E0D1E = {
 			isa = PBXGroup;
 			children = (
 				A4A3E2CB1DF6100A009E0D1E /* SnacMap */,
 				A4A3E2CA1DF6100A009E0D1E /* Products */,
+				2E3B0281A536D72D217D8C23 /* Pods */,
+				7657BDF2943CDB35ADAA0DFB /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -64,7 +136,6 @@
 				A4A3E2DE1DF610A3009E0D1E /* Supporting Assets */,
 				A4A3E2E11DF612E8009E0D1E /* View */,
 				A4A3E2CC1DF6100A009E0D1E /* AppDelegate.swift */,
-				A4A3E2CE1DF6100A009E0D1E /* StartScreenController.swift */,
 			);
 			path = SnacMap;
 			sourceTree = "<group>";
@@ -82,6 +153,8 @@
 		A4A3E2DF1DF612B6009E0D1E /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				A4A3E2CE1DF6100A009E0D1E /* StartScreenController.swift */,
+				A471490A1DF7966000911FEB /* MapController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -89,6 +162,9 @@
 		A4A3E2E01DF612BC009E0D1E /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				A4A2B6101DF8ECAB006CAB1C /* Places */,
+				A4A2B60F1DF8EC9F006CAB1C /* Directions */,
+				A4C4D6FC1DF82F73003C784F /* SafeJsonObject.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -117,9 +193,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A4A3E2DB1DF6100A009E0D1E /* Build configuration list for PBXNativeTarget "SnacMap" */;
 			buildPhases = (
+				900166AF3D7D214D55D548A7 /* [CP] Check Pods Manifest.lock */,
 				A4A3E2C51DF61009009E0D1E /* Sources */,
 				A4A3E2C61DF61009009E0D1E /* Frameworks */,
 				A4A3E2C71DF61009009E0D1E /* Resources */,
+				8E8434D80C43BAEB5D7CBDF4 /* [CP] Embed Pods Frameworks */,
+				5E7831DC583C7CBDD18CF799 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -144,6 +223,11 @@
 						CreatedOnToolsVersion = 8.1;
 						DevelopmentTeam = 45758H2S96;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 0;
+							};
+						};
 					};
 				};
 			};
@@ -177,16 +261,76 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		5E7831DC583C7CBDD18CF799 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SnacMap/Pods-SnacMap-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8E8434D80C43BAEB5D7CBDF4 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SnacMap/Pods-SnacMap-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		900166AF3D7D214D55D548A7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		A4A3E2C51DF61009009E0D1E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A4DAF4C41DFB9DF900ACCEFB /* RouteLeg.swift in Sources */,
+				A4DAF4C61DFB9E0500ACCEFB /* RouteLegDistance.swift in Sources */,
 				A4A3E2E31DF6135A009E0D1E /* StartScreenView.swift in Sources */,
 				A4A3E2E81DF621AD009E0D1E /* PaddedTextField.swift in Sources */,
+				A4DAF4C21DFB9DE100ACCEFB /* RouteStep.swift in Sources */,
+				A4DAF4BA1DFB9D7600ACCEFB /* Route.swift in Sources */,
 				A4A3E2CF1DF6100A009E0D1E /* StartScreenController.swift in Sources */,
+				A4DAF4BC1DFB9DA300ACCEFB /* OverviewPolyline.swift in Sources */,
 				A4A3E2CD1DF6100A009E0D1E /* AppDelegate.swift in Sources */,
+				A4DAF4C01DFB9DD000ACCEFB /* Location.swift in Sources */,
+				A4DAF4B81DFB9D5B00ACCEFB /* FbLocation.swift in Sources */,
+				A471490B1DF7966100911FEB /* MapController.swift in Sources */,
 				A4A3E2E61DF613B9009E0D1E /* Extensions.swift in Sources */,
+				A4C4D6FD1DF82F73003C784F /* SafeJsonObject.swift in Sources */,
+				A4A2B6121DF8ECBE006CAB1C /* FbApiPlace.swift in Sources */,
+				A4C4D6FF1DF83102003C784F /* Directions.swift in Sources */,
+				A4DAF4BE1DFB9DB900ACCEFB /* RouteBounds.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -299,6 +443,7 @@
 		};
 		A4A3E2DC1DF6100A009E0D1E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 382E8AF14ED6389BE9ACC4EE /* Pods-SnacMap.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 45758H2S96;
@@ -312,6 +457,7 @@
 		};
 		A4A3E2DD1DF6100A009E0D1E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AAAB41C914FEC399C2BC4057 /* Pods-SnacMap.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 45758H2S96;
