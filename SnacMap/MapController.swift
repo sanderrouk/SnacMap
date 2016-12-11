@@ -12,10 +12,9 @@ import Alamofire
 
 class MapController: UIViewController {
     
-    let apiKeyForJsonRequest = ""
     var origin: String
     var destination: String
-    let mapView = GMSMapView()
+    fileprivate let mapView = GMSMapView()
     
     init(origin: String, destination: String) {
         self.origin = origin.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines).replacingOccurrences(of: " ", with: "+")
@@ -62,7 +61,6 @@ class MapController: UIViewController {
                 startMarker.title = startAddress
                 endMarker.title = endAddress
             }
-            
             startMarker.map = map
             endMarker.map = map
         }
@@ -78,7 +76,6 @@ class MapController: UIViewController {
         Alamofire.request(encodedUrlString).responseJSON { response in
             
             if let JSON = response.result.value, let jsonDictionaries = JSON as? Dictionary<String, AnyObject> {
-                
                 let directions = Directions()
                 directions.setValuesForKeys(jsonDictionaries)
                 let routes = directions.routes
@@ -90,12 +87,10 @@ class MapController: UIViewController {
                 
                 // Add markers for destination and end
                 self.addEndAndStartMarker(forLegs: routeLegs, onMap: map)
-                
                 //Move camera to new path.
                 if let routeBounds = routeBounds {
                     self.moveCameraToPath(withBounds: routeBounds, onMap: map)
                 }
-                
                 // Draw Route Path
                 if let route = routes?.first {
                     self.drawRoutePath(usingRoute: route, onMap: map)
@@ -160,10 +155,8 @@ class MapController: UIViewController {
         var returnablePlaces = places
         var sortedDistances = placeDistances.sorted(by: <)
         if sortedDistances.count > 10 {
-            for _ in 0...9 {
-                sortedDistances.remove(at: 0)
-            }
-            
+            //Remove suitable from list
+            sortedDistances.removeSubrange(0...9)
             // Remove places left in sorted distances because they are unsuitable
             for distance in sortedDistances {
                 if let index = placeDistances.index(of: distance)  {
@@ -175,10 +168,10 @@ class MapController: UIViewController {
         return returnablePlaces
     }
     
-    //PICK PLACES, max 50km(even this is too long of a distance) away because some places do not have good facebook coverage
+    //PICK PLACES, max 50km, even this is too long of a distance, but fb has problems locating nearby places for some routes(including Jõgeva->Tallinn)
     fileprivate func findNearbyRestaurants(onMap map: GMSMapView, usingMiddleLocation targetLocation: CLLocationCoordinate2D) {
         
-        let urlString = "https://graph.facebook.com/v2.8/search?fields=name,id,location,fan_count&q=restaurant&type=place&center=\(targetLocation.latitude),\(targetLocation.longitude)&distance=50000&access_token=\(AppDelegate.apiKeys.fbAppId)|\(AppDelegate.apiKeys.fbAppSecret)"
+        let urlString = "https://graph.facebook.com/v2.8/search?fields=name,location,fan_count&q=restaurant&type=place&center=\(targetLocation.latitude),\(targetLocation.longitude)&distance=50000&access_token=\(AppDelegate.apiKeys.fbAppId)|\(AppDelegate.apiKeys.fbAppSecret)"
         guard let encodedUrlString = urlString.addingPercentEncoding(withAllowedCharacters: .urlFragmentAllowed) else {
             print("Failed to get encoded URL String")
             return
@@ -203,7 +196,6 @@ class MapController: UIViewController {
                             placeMarker.title = name
                             placeMarker.snippet = "Number of likes: \(likes)"
                         }
-                        
                         placeMarker.map = map
                     }
                 }
